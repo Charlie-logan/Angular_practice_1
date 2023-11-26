@@ -1,0 +1,59 @@
+<header class="modal-header">
+  <h4>Welcome to the Calculator App</h4>
+</header>
+<main>
+  <div class="container-fluid ce">
+    <div class="form-group" style="margin: 4px;">
+      <div class="row">
+      <div class="col">
+      <label for="No1">Number 1: </label>
+      <input type="text" placeholder="Enter Number 1" class="form-control" #t1></div>
+      <div class="col">
+      <label for="No2">Number 2: </label>
+      <input type="text" placeholder="Enter Number 1" class="form-control" #t2></div>
+    </div><br/>
+      <div class="ra">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" value="Add" name="r1" #r1>
+          <label class="form-check-label" for="exampleRadios1">ADD</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" value="Sub" name="r1" #r2>
+          <label class="form-check-label" for="exampleRadios1">MULT</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" value="Mult" name="r1" #r3>
+          <label class="form-check-label" for="exampleRadios1">SUB</label>
+
+        </div>        
+        <div class="form-check">
+          <input class="form-check-input" type="radio" value="Div" name="r1" #r4>
+          <label class="form-check-label" for="exampleRadios1">DIV</label>
+        </div>        
+        <div class="form-check">
+          <input class="form-check-input" type="radio" value="Max" name="r1" #r5>
+          <label class="form-check-label" for="exampleRadios1">MAX</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" value="Min" name="r1" #r6>
+          <label class="form-check-label" for="exampleRadios1">MIN</label>
+        </div>        
+        <div class="form-check">
+          <input class="form-check-input" type="radio" value="Avg" name="r1" #r7>
+          <label class="form-check-label" for="exampleRadios1">AVG</label>
+        </div>        
+        <div class="form-check">
+          <input class="form-check-input" type="radio" value="Rem" name="r1" #r8>
+          <label class="form-check-label" for="exampleRadios1">REM</label>
+        </div>      
+      </div>
+      <br/>
+      <div>
+        <button (click)="onCalculate(t1,t2,r1,r2,r3,r4,r5,r6,r7,r8)" type="button" class="btn btn-primary">Submit</button>
+      </div><br/>
+      <div>
+        <p [innerHTML]="result"></p>
+      </div>
+    </div>
+  </div>
+</main>
